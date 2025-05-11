@@ -57,7 +57,7 @@ His family remains a strong pillar of support in his service to God and the chur
       {/* Hero Section */}
       <section className="hero-section relative h-[70vh] flex items-center justify-center">
         <div className="container mx-auto text-center text-white px-4 z-10 animate-fade-in">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-cinzel font-bold mb-6">Welcome to the Church of Christ</h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-cinzel font-bold mb-6">Welcome to the Church of Christ, Lugbe</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Join us in worship, fellowship, and service as we grow together in faith and love.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white">
