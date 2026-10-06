@@ -1,0 +1,75 @@
+# ==============================================================================
+# Church of Christ, Lugbe - Git Ignore Configuration
+# ==============================================================================
+
+# Dependencies
+node_modules/
+*/node_modules/
+**/node_modules/
+**/node_modules/**
+node_modules
+
+# Production Build Outputs
+dist/
+dist-ssr/
+build/
+out/
+.output/
+**/dist/
+**/dist-ssr/
+**/build/
+**/out/
+
+# Vite, Test & Bundler Cache
+.vite/
+**/.vite/
+.cache/
+**/.cache/
+coverage/
+**/coverage/
+
+# Environment Variables & Local Secrets
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+!.env.example
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+**/.DS_Store
+**/Thumbs.db
+
+# Logs & Debugging
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor & IDE Directories
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swo
+*.swp
+
+# Temporary & Scratch Files
+tmp/
+temp/
+*.local

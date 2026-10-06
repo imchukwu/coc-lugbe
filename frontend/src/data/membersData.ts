@@ -1,0 +1,135 @@
+export interface Member {
+  id: string;
+  name: string;
+  role: string;
+  department: string;
+  phone: string;
+  email: string;
+  avatar?: string;
+  initials: string;
+  location?: string;
+}
+
+export const membersData: Member[] = [
+  {
+    id: "1",
+    name: "Evang. Rupert T. Kukwa",
+    role: "Minister & Evangelist",
+    department: "Leadership & Pulpit",
+    phone: "+234 803 123 4567",
+    email: "r.kukwa@coclugbe.org",
+    avatar: "/src/assets/minister.jpg",
+    initials: "RK",
+    location: "Lugbe, Abuja",
+  },
+  {
+    id: "2",
+    name: "Bro. Peter O. Danladi",
+    role: "Church Secretary & Bible Teacher",
+    department: "Secretariat & Teaching",
+    phone: "+234 802 345 6789",
+    email: "p.danladi@coclugbe.org",
+    initials: "PD",
+    location: "Lugbe, Abuja",
+  },
+  {
+    id: "3",
+    name: "Sis. Grace N. Okon",
+    role: "Women's Fellowship Coordinator",
+    department: "Women's Ministry",
+    phone: "+234 805 456 7890",
+    email: "g.okon@coclugbe.org",
+    initials: "GO",
+    location: "Lugbe, Abuja",
+  },
+  {
+    id: "4",
+    name: "Bro. Emmanuel K. Bello",
+    role: "Song Leader & Youth Coordinator",
+    department: "Worship & Youth",
+    phone: "+234 807 567 8901",
+    email: "e.bello@coclugbe.org",
+    initials: "EB",
+    location: "Lugbe, Abuja",
+  },
+  {
+    id: "5",
+    name: "Sis. Deborah M. Yusuf",
+    role: "Children's Sunday School Coordinator",
+    department: "Children's Ministry",
+    phone: "+234 809 678 9012",
+    email: "d.yusuf@coclugbe.org",
+    initials: "DY",
+    location: "Lugbe, Abuja",
+  },
+  {
+    id: "6",
+    name: "Bro. Samuel A. Adeleke",
+    role: "Welfare & Benevolence Coordinator",
+    department: "Benevolence & Care",
+    phone: "+234 810 789 0123",
+    email: "s.adeleke@coclugbe.org",
+    initials: "SA",
+    location: "Lugbe, Abuja",
+  },
+  {
+    id: "7",
+    name: "Bro. Joshua C. Eze",
+    role: "Media & Audio-Visual Coordinator",
+    department: "Media & Technology",
+    phone: "+234 812 890 1234",
+    email: "j.eze@coclugbe.org",
+    initials: "JE",
+    location: "Lugbe, Abuja",
+  },
+  {
+    id: "8",
+    name: "Sis. Ruth A. Garba",
+    role: "Hospitality & Visitor Reception",
+    department: "Hospitality",
+    phone: "+234 814 901 2345",
+    email: "r.garba@coclugbe.org",
+    initials: "RG",
+    location: "Lugbe, Abuja",
+  },
+  {
+    id: "9",
+    name: "Bro. Michael B. Terver",
+    role: "Evangelism & Follow-up Team",
+    department: "Evangelism",
+    phone: "+234 816 012 3456",
+    email: "m.terver@coclugbe.org",
+    initials: "MT",
+    location: "Lugbe, Abuja",
+  },
+  {
+    id: "10",
+    name: "Sis. Maryam S. Audu",
+    role: "Intercession & Visitation Team",
+    department: "Prayer & Visitation",
+    phone: "+234 818 123 4567",
+    email: "m.audu@coclugbe.org",
+    initials: "MA",
+    location: "Lugbe, Abuja",
+  },
+  {
+    id: "11",
+    name: "Bro. David T. Iorfa",
+    role: "Ushering & Order Coordinator",
+    department: "Protocol & Ushering",
+    phone: "+234 803 234 5678",
+    email: "d.iorfa@coclugbe.org",
+    initials: "DI",
+    location: "Lugbe, Abuja",
+  },
+  {
+    id: "12",
+    name: "Bro. Stephen O. Adams",
+    role: "Treasury & Finance Committee",
+    department: "Administration & Finance",
+    phone: "+234 802 345 6781",
+    email: "s.adams@coclugbe.org",
+    initials: "SA",
+    location: "Lugbe, Abuja",
+  },
+];
