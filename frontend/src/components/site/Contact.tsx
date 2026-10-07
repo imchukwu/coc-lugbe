@@ -5,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 export const Contact = () => {
   return (
-    <section id="contact" className="py-20 md:py-28 bg-background relative overflow-hidden">
+    <section id="contact" className="py-20 md:py-28 bg-secondary relative overflow-hidden">
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[500px] bg-gradient-glow opacity-30 blur-3xl pointer-events-none" />
       <div className="container relative">
         <div id="visit" className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -20,7 +20,7 @@ export const Contact = () => {
             </p>
 
             <div className="mt-10 space-y-5">
-              <div className="flex items-start gap-5 p-5 rounded-2xl bg-gradient-card border border-border">
+              <div className="flex items-start gap-5 p-5 rounded-2xl bg-card border border-border shadow-card-soft">
                 <div className="h-12 w-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
                   <MapPin className="h-5 w-5" />
                 </div>
@@ -30,7 +30,7 @@ export const Contact = () => {
                 </div>
               </div>
               <div className="grid sm:grid-cols-2 gap-5">
-                <div className="flex items-start gap-5 p-5 rounded-2xl bg-gradient-card border border-border">
+                <div className="flex items-start gap-5 p-5 rounded-2xl bg-card border border-border shadow-card-soft">
                   <div className="h-12 w-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
                     <Phone className="h-5 w-5" />
                   </div>
@@ -39,7 +39,7 @@ export const Contact = () => {
                     <div className="text-muted-foreground text-sm mt-1">+234 803 123 4567</div>
                   </div>
                 </div>
-                <div className="flex items-start gap-5 p-5 rounded-2xl bg-gradient-card border border-border">
+                <div className="flex items-start gap-5 p-5 rounded-2xl bg-card border border-border shadow-card-soft">
                   <div className="h-12 w-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
                     <Mail className="h-5 w-5" />
                   </div>

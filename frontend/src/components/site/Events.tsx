@@ -5,14 +5,14 @@ import { Button } from "@/components/ui/button";
 import { getUpcomingChurchEvents, type ChurchEvent } from "@/data/eventsData";
 
 export const Events = () => {
-  // Only render events that are strictly after the current time/date
+  // Only render latest upcoming row of 3 events strictly after the current time/date
   const upcomingEvents = useMemo(() => {
-    return getUpcomingChurchEvents(6);
+    return getUpcomingChurchEvents(3);
   }, []);
 
   return (
-    <section id="events" className="py-20 md:py-28 bg-background">
-      <div className="container">
+    <section id="events" className="py-20 md:py-28 bg-secondary relative overflow-hidden">
+      <div className="container relative">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div className="max-w-xl">
             <span className="text-xs uppercase tracking-[0.3em] text-accent font-semibold">Church Calendar</span>
@@ -25,17 +25,18 @@ export const Events = () => {
           </div>
           <Button asChild variant="outline" className="rounded-full border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground self-start md:self-auto h-11 px-6">
             <Link to="/events">
-              View All Events & Schedule <ArrowRight className="ml-1.5 h-4 w-4" />
+              View All Events & Schedules <ArrowRight className="ml-1.5 h-4 w-4" />
             </Link>
           </Button>
         </div>
 
+        {/* 1 Row of 3 Columns */}
         {upcomingEvents.length > 0 ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {upcomingEvents.map((e) => (
               <article
                 key={e.id}
-                className="group flex flex-col justify-between rounded-3xl bg-gradient-card border border-border p-6 hover:shadow-elegant hover:-translate-y-1 transition-all duration-500"
+                className="group flex flex-col justify-between rounded-3xl bg-card border border-border p-6 hover:shadow-elegant hover:-translate-y-1 transition-all duration-500"
               >
                 <div>
                   <div className="flex items-center justify-between gap-4 mb-4">
@@ -77,6 +78,15 @@ export const Events = () => {
             <p className="text-sm text-muted-foreground mt-1">Check back soon for new announcements.</p>
           </div>
         )}
+
+        {/* View All Events Button */}
+        <div className="mt-14 text-center">
+          <Button asChild className="rounded-full bg-primary hover:bg-primary/90 px-8 h-12 text-sm shadow-card-soft">
+            <Link to="/events">
+              View All Events & Schedules <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );

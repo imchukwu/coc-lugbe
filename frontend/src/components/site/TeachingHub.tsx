@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Play,
@@ -10,28 +9,13 @@ import {
   ArrowRight,
   BookOpen,
   Calendar,
-  Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { teachingsData, TeachingFormat } from "@/data/teachingsData";
 
-const filterTabs = [
-  { label: "All Formats", value: "all" },
-  { label: "Sermons & Video", value: "video" },
-  { label: "Audio & Sermons", value: "audio" },
-  { label: "Short Videos", value: "short" },
-  { label: "Podcasts", value: "podcast" },
-  { label: "Presentation Slides", value: "slides" },
-  { label: "Biblical Articles", value: "article" },
-];
-
 export const TeachingHub = () => {
-  const [activeFilter, setActiveFilter] = useState<string>("all");
-
-  const filteredItems = teachingsData.filter((item) => {
-    if (activeFilter === "all") return true;
-    return item.format === activeFilter;
-  });
+  // Display only the latest row of 3 items on the index page
+  const latestItems = teachingsData.slice(0, 3);
 
   const getFormatBadge = (format: TeachingFormat) => {
     switch (format) {
@@ -73,26 +57,9 @@ export const TeachingHub = () => {
           </Button>
         </div>
 
-        {/* Format Selector Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-10 no-scrollbar">
-          {filterTabs.map((tab) => (
-            <button
-              key={tab.value}
-              onClick={() => setActiveFilter(tab.value)}
-              className={`px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-300 border ${
-                activeFilter === tab.value
-                  ? "bg-primary text-primary-foreground border-primary shadow-card-soft"
-                  : "bg-card text-muted-foreground border-border hover:border-primary/40 hover:text-foreground"
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
-
-        {/* Media Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.slice(0, 6).map((item) => {
+        {/* 1 Row of 3 Columns: Latest 3 items without filters */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {latestItems.map((item) => {
             const badge = getFormatBadge(item.format);
             const BadgeIcon = badge.icon;
 
@@ -169,7 +136,7 @@ export const TeachingHub = () => {
         <div className="mt-14 text-center">
           <Button asChild className="rounded-full bg-primary hover:bg-primary/90 px-8 h-12 text-sm shadow-card-soft">
             <Link to="/teachings">
-              Access All Teachings, Slides & Podcasts <ArrowRight className="ml-2 h-4 w-4" />
+              View Full Media Library <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </div>
