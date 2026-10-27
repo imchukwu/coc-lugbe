@@ -2,6 +2,7 @@ import Navbar from "@/components/site/Navbar";
 import Hero from "@/components/site/Hero";
 import Welcome from "@/components/site/Welcome";
 import ServiceTimes from "@/components/site/ServiceTimes";
+import DailyQuiz from "@/components/site/DailyQuiz";
 import BeliefsSection from "@/components/site/BeliefsSection";
 import TeachingHub from "@/components/site/TeachingHub";
 import Minister from "@/components/site/Minister";
@@ -18,6 +19,7 @@ const Index = () => {
         <Hero />
         <Welcome />
         <ServiceTimes />
+        <DailyQuiz />
         <BeliefsSection />
         <TeachingHub />
         <Minister />

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { Menu, Calendar } from "lucide-react";
+import { Menu, Calendar, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
@@ -101,6 +101,19 @@ export const Navbar = () => {
 
         {/* Action Button & Mobile Menu */}
         <div className="flex items-center gap-3">
+          <Link
+            to="/#daily-quiz"
+            className={cn(
+              "hidden md:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-semibold transition-all border",
+              showSolidNav
+                ? "bg-primary/5 hover:bg-primary/10 text-primary border-primary/20 hover:border-accent"
+                : "bg-white/10 hover:bg-white/20 text-white border-white/20 hover:border-accent"
+            )}
+          >
+            <Sparkles className="h-3.5 w-3.5 text-accent" />
+            <span>Daily Quiz</span>
+          </Link>
+
           <Button
             asChild
             className="hidden md:inline-flex bg-accent text-accent-foreground hover:bg-accent/90 shadow-gold rounded-full px-6 h-11 text-xs font-semibold"
@@ -158,6 +171,18 @@ export const Navbar = () => {
                       </NavLink>
                     </SheetClose>
                   ))}
+
+                  <SheetClose asChild>
+                    <Link
+                      to="/#daily-quiz"
+                      className="text-base font-display py-3 px-3 rounded-xl transition-colors flex items-center justify-between bg-white/10 text-accent font-semibold mt-1"
+                    >
+                      <span className="flex items-center gap-2">
+                        <Sparkles className="h-4 w-4 text-accent" /> Daily Bible Quiz
+                      </span>
+                      <span className="text-xs text-accent">Play →</span>
+                    </Link>
+                  </SheetClose>
                 </div>
               </div>
 
